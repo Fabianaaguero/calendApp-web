@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" (click)="cerrar()">
+      <ion-back-button class="md" mode="md" defaultHref="patients"></ion-back-button>Atrás
+    </ion-buttons>
+    <ion-title slot="end">CalendApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="ion-padding">
+  <div class="contenedor">
+
+    <div>
+      <h1>Informacion del cliente</h1>
+      <label>Consulta la información que necesitas de tu cliente en esta pantalla</label>
+    </div>
+
+    <div class="page-content">
+      <p>Nombre: {{ paciente.nombre }}</p>
+      <p>Apellido: {{ paciente.apellido }}</p>
+      <p>Correo: {{ paciente.correo }}</p>
+      <p>DNI: {{ paciente.dni }}</p>
+      <p>Teléfono: {{ paciente.telefono }}</p>
+      <div class="botones">
+        <a href="https://wa.me/{{ paciente.telefono}}" class="boton" target="_blank" rel="noopener">Contactar por Whatsapp</a>
+        <a href="tel:{{ paciente.telefono }}" class="boton" target="_blank" rel="noopener">Llamar por teléfono</a>
+        <a href="mailto:{{ paciente.correo }}" class="boton" target="_blank" rel="noopener">Enviar email</a>
+      </div>
+    </div>
+  </div>
+</ion-content>

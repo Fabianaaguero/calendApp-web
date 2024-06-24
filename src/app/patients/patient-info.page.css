@@ -1,0 +1,64 @@
+.page-content {
+  height: 90%;
+  position: relative;
+  text-align: left;
+}
+
+ion-label {
+  font-size: 16px;
+  margin: 0px;
+}
+
+h1 {
+  margin: 8px 0px;
+}
+
+p {
+  margin: 10px 0px;
+}
+
+.round-btn {
+  background-color: transparent;
+  --border-radius: 50px;
+  padding: 0px 2px;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.botonera {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+table {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 10px;
+}
+
+td {
+  width: 100%;
+}
+
+.botones {
+  text-align: center;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.boton {
+  display: block;
+  background-color: rgb(0, 94, 255);
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  width: 250px;
+  border-radius: 10px;
+  margin: 5px auto;
+}/*# sourceMappingURL=patient-info.page.css.map */

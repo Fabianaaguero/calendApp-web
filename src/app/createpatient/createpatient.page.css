@@ -1,0 +1,19 @@
+.form1 {
+  margin-top: 20px;
+}
+
+ion-item {
+  --padding-start:0;
+  --inner-padding-end:0;
+  margin: 3px 0px;
+}
+ion-item ion-icon {
+  font-size: 18px;
+  padding: 0px 10px;
+}
+
+.btn-wrap {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+}/*# sourceMappingURL=createpatient.page.css.map */

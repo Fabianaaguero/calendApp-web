@@ -1,0 +1,49 @@
+.form1 {
+  margin: 10px 0px;
+}
+
+ion-list {
+  margin: 10px 0px;
+  padding: 0px 15px;
+  text-align: left;
+}
+
+ion-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+}
+ion-item ion-icon {
+  padding-right: 5px;
+  font-size: 18px;
+}
+
+.annotator {
+  height: 200px;
+  max-height: 200px;
+  text-align: left;
+}
+
+.btn-wrap {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.delete-btn {
+  --background: #ff0000;
+  --border-radius: 30px;
+  height: 35px;
+  width: 35px;
+}
+.delete-btn ion-icon {
+  font-size: 58px;
+}
+
+.btn {
+  width: 130px;
+}/*# sourceMappingURL=annotator.page.css.map */

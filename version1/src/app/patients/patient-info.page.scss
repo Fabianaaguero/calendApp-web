@@ -1,0 +1,28 @@
+.page-content {
+  height: 80%;
+  position: relative;
+  text-align: left;
+}
+
+ion-label {
+  font-size: 16px;
+  margin: 0px;
+}
+
+.round-btn{
+  --background: grey;
+  --border-radius: 30px;
+  height: 60px;
+  width: 60px;
+  ion-icon {
+      height: 30px;
+      width: 30px;
+  }
+}
+
+.boton{
+  position: absolute;
+  bottom: 20px;
+  left:45%;
+}
+

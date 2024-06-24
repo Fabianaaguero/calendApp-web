@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons class="md"  mode="md" slot="start" >
+      <ion-back-button class="md" mode="md" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end">CalendApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="ion-padding">
+
+  <div class="contenedor">
+
+    <h1>Clientes</h1>
+
+    <h6>Busca, crea, elimina, anota y agenda nuevos turnos. ¡Todo a la mano para gestionar tus clientes!</h6>
+
+    <div class="search-create">
+      <ion-searchbar name="barSearch" [(ngModel)]="searchTerm" showCancelButton="focus" placeholder="Buscar"></ion-searchbar>
+      <ion-button routerLink="/createpatient">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="pacientes-wrapper">
+        <ion-list class="lista1" [inset]="true">
+          <ion-item button *ngFor="let paciente of pacientes | filter:searchTerm"
+            (click)="seleccionarPaciente(paciente)" [class.selected]="paciente === pacienteSeleccionado">
+            <ion-label> {{ paciente.nombre }} {{ paciente.apellido }} </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+    <div class="re-btn-wrap">
+      <ion-button class="turn-btn round-btn" (click)=asignarTurnoPaciente() title="Asignar turnos">
+        <ion-icon name="calendar"></ion-icon>
+      </ion-button>
+      <ion-button class="clipboard-btn round-btn" (click)="accederAnotador()"
+        title="Permite agregar notas sobre el cliente">
+        <ion-icon name="clipboard"></ion-icon>
+      </ion-button>
+      <ion-button class="info-btn round-btn" (click)="mostrarInformacionPaciente()" title="Muestra datos del cliente">
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
+      <ion-button class="add-btn round-btn" routerLink="/createpatient" title="Agrega cliente">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+      <ion-button class="delete-btn round-btn" (click)="eliminarPaciente()" title="Elimina cliente">
+        <ion-icon name="trash-outline" alt="Elimina cliente"></ion-icon>
+      </ion-button>
+      <!-- <ion-button class="back-btn round-btn" title="Volver" routerLink="/home">
+        <ion-icon name="arrow-undo-outline" alt="Volver al Home"></ion-icon>
+      </ion-button> -->
+    </div>
+
+  </div>
+</ion-content>

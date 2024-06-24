@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons class="md"  mode="md" slot="start" >
+     <ion-back-button class="md" mode="md" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end">CalendApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="ion-padding">
+  <div class="contenedor">
+    <div>
+      <h1>Crear cliente</h1>
+      <label>Crea un cliente y gestiónalo desde la App!</label>
+    </div>
+
+    <div>
+      <form class="form1">
+        <ion-item color="light">
+          <ion-icon name="person-outline"></ion-icon>
+          <ion-input color="light" [(ngModel)]="inputNombre" [ngModelOptions]="{standalone: true}" placeholder="Nombre" required ></ion-input>
+        </ion-item>
+        <ion-item color="light">
+          <ion-icon name="person-outline"></ion-icon>
+          <ion-input [(ngModel)]="inputApellido" [ngModelOptions]="{standalone: true}" placeholder="Apellido" required></ion-input>
+        </ion-item>
+        <ion-item color="light">
+          <ion-icon name="card-outline"></ion-icon>
+          <ion-input [(ngModel)]="inputDNI" [ngModelOptions]="{standalone: true}" placeholder="Documento" required></ion-input>
+        </ion-item>
+        <ion-item color="light">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <ion-input [(ngModel)]="inputFechaNac" [ngModelOptions]="{standalone: true}" placeholder="Fecha de nacimiento" required></ion-input>
+        </ion-item>
+        <ion-item color="light">
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-input [(ngModel)]="inputCorreo" [ngModelOptions]="{standalone: true}" placeholder="Correo electrónico" required></ion-input>
+        </ion-item>
+        <ion-item color="light">
+          <ion-icon name="call-outline"></ion-icon>
+          <ion-input [(ngModel)]="inputTelefono" [ngModelOptions]="{standalone: true}" placeholder="Número de teléfono" required></ion-input>
+        </ion-item>
+      </form>        
+    </div>
+    
+    <div class="btn-wrap">
+      <ion-button  fill="solid" shape="round" color="primary" (click)="nuevoCliente()">Guardar</ion-button>
+      <ion-button fill="solid" shape="round" color="dark" (click)="cancelar()">Cancelar</ion-button>
+    </div>
+
+  </div>
+</ion-content>

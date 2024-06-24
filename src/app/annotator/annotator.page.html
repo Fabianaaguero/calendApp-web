@@ -1,0 +1,38 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons class="md"  mode="md" slot="start" >
+     <ion-back-button class="md" mode="md" defaultHref="patients"></ion-back-button>Volver
+    </ion-buttons>
+    <ion-title slot="end">CalendApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="ion-padding">
+  <div class="contenedor">
+
+    <h1>Notas</h1>
+    <label>Escribe aquí tus notas sobre {{ pacienteSeleccionado?.nombre }} {{ pacienteSeleccionado?.apellido }}</label>
+
+    <form class="form1">
+      <ion-item>
+        <ion-textarea class="annotator" [(ngModel)]="anotadorInput" name="anotadorInput"  maxlength="300"
+          placeholder="Escribe aquí tus notas (máximo 300 caracteres)"></ion-textarea>
+      </ion-item>
+    </form>
+
+    <ion-list>
+      <ion-item *ngFor="let observacion of observaciones">
+        <ion-label>{{ observacion }}</ion-label>
+        <ion-button class="delete-btn" (click)="eliminarObservacion(observacion)">X
+        </ion-button>
+      </ion-item>
+    </ion-list>
+
+    <div class="btn-wrap">
+      <ion-button class="btn" fill="solid" shape="round" color= "primary" (click)="guardarEscritura()" >Guardar</ion-button>
+      <ion-button class="btn" fill="solid" shape="round" color="dark" (click)="cancelarAnotador()">Cancelar</ion-button>
+    </div>
+
+  </div>
+</ion-content>

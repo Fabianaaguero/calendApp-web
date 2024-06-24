@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons class="md" mode="md" slot="start">
+      <ion-back-button class="md" mode="md" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end">CalendApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="contenedor">
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-img class="imgLogo" src="../../../assets/robot250.png" alt="logoCalendApp"></ion-img>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <h1 id="lblPerfil" class="clsPerfil">Tu perfil</h1>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item lines="full" color="light">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-label id="lblNombre">Nombre: {{nombre}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item lines="full" color="light">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-label id="lblApellido">Apellido: {{apellido}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item lines="full" color="light">
+              <ion-icon name="mail-outline"></ion-icon>
+              <ion-label id="lblEmail">Email: {{email}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item lines="full" color="light">
+              <ion-icon name="card-outline"></ion-icon>
+              <ion-label id="lblPlan">Suscripción: {{tipoSuscripcion}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item lines="full" color="light">
+              <ion-icon name="card-outline"></ion-icon>
+              <ion-label id="lblPlan">Suscripción vence: {{fechaFinSuscr}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-button fill="solid" shape="round" color="primary" routerLink="/suscription">Renovar suscripción</ion-button>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+    </div>
+
+  </div>
+
+</ion-content>

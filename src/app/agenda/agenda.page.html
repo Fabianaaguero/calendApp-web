@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons class="md" mode="md" slot="start">
+      <ion-back-button class="md" mode="md" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end">CalendApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="ion-padding">
+
+  <div class="contenedor">
+
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <div>
+      <h1>Turnos agendados para el día {{ fecha }}</h1>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="turnos-wrapper">
+        <ion-list class="lista1" [inset]="true">
+          <ion-item button *ngFor="let turno of turnosDia" (click)="seleccionarTurno(turno)"
+            [class.selected]="turno === turnoSeleccionado">
+            <ion-label>{{ turno.nombre }} - {{turno.hora}} hs </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+    <div *ngIf="noHayTurnos">
+      <img src="../../assets/robotduerme.png" alt="No hay turno" title="No hay turnos">
+      <h4>No hay turnos agendados para este dia</h4>
+    </div>
+
+    <div class="botonera">
+      <table>
+        <tr>
+          <td>
+            <button class="round-btn" routerLink="/calendario" title="Ver turnos">
+              <img class="imgBoton" src="../../assets/botones/botonAgenda.png" alt="Ver turnos">
+            </button>
+          </td>
+          <td>
+            <button class="round-btn" (click)=agregarTurno() title="Agregar Turno">
+              <img class="imgBoton" src="../../assets/botones/botonAgregar3.png" alt="Agregar turno">
+            </button>
+          </td>
+          <td>
+            <button class="round-btn" title="Eliminar Turno" (click)="eliminar()">
+              <img class="imgBoton" src="../../assets/botones/botonEliminar.png" alt="Eliminar turno">
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Ver</label>
+          </td>
+          <td>
+            <label>Agregar</label>
+          </td>
+          <td>
+            <label>Eliminar</label>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</ion-content>

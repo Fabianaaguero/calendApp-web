@@ -1,0 +1,45 @@
+.contenedor {
+  text-align: center;
+  justify-content: center;
+  min-width: 300px;
+}
+
+.imgLogo {
+  margin: 10px auto;
+  width: 80%;
+  max-width: 200px;
+}
+
+ion-grid {
+  max-width: 800px;
+  margin: 0px;
+  width: 80dvw;
+  min-width: 300px;
+}
+
+ion-col {
+  padding: 2px 5px;
+}
+
+ion-icon {
+  margin-right: 10px;
+}
+
+.clsPerfil {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 500px) {
+  ion-item {
+    font-size: small;
+  }
+  ion-item .round-btn {
+    width: 70px;
+    height: 70px;
+  }
+  label {
+    font-size: small;
+  }
+}/*# sourceMappingURL=perfil.page.css.map */

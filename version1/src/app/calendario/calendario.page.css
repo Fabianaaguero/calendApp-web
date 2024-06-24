@@ -1,0 +1,18 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-datetime {
+  margin: 30px auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 2px 2px grey;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 130px;
+}/*# sourceMappingURL=calendario.page.css.map */

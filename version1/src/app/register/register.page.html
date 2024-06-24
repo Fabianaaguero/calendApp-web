@@ -1,0 +1,135 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons class="md"  mode="md" slot="start" >
+     <ion-back-button class="md" mode="md" defaultHref="login"></ion-back-button>Login
+    </ion-buttons>
+    <ion-title slot="end">CalendApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]=false>
+  <div class="contenedor">
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-img class="imgLogin" src="../../../assets/robot250.png" alt="nuevo_usuario"></ion-img>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item lines="full" color="light">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-input id="idNombre" type="text" maxlength="30" minlength="2"  #nombre required placeholder="Nombre (hasta 30 caracteres)"> </ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item lines="full" color="light">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-input id="idApellido" type="text" maxlength="30" minlength="2" #apellido required placeholder="Apellido (hasta 30 caracteres)" > </ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item lines="full" color="light">
+              <ion-icon name="mail-outline"></ion-icon>
+              <ion-input id="idEmail" type="email" maxlength="30" minlength="8" #email required placeholder="Email (hasta 30 caracteres)"> </ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item lines="full" color="light">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <ion-input id="idPassw" type="password" maxlength="16" minlength="8" #password required
+                placeholder="Contraseña (de 8 a 16 caracteres)"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item lines="full" color="light">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <ion-input id="idPassw2" type="password" maxlength="16" minlength="8"  #password2 required placeholder="Repetir contraseña"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item lines="full" color="light">Seleccioná el tipo de suscripción:</ion-item>
+            <ion-item lines="none">
+              <ion-list class="lista1" slot="start">
+                <ion-radio-group value="prueba" [allowEmptySelection]="false" (ionChange)="radioGroupChange($event)">
+                  <ion-radio value="prueba" justify="start" labelPlacement="end" color="dark" name="radio_list">Prueba
+                    por
+                    30 dias - Gratis</ion-radio>
+                  <br />
+                  <ion-radio value="suscribir" justify="start" labelPlacement="end" color="dark"
+                    name="radio_list">Suscripción anual - u$s120,00</ion-radio>
+                </ion-radio-group>
+              </ion-list>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <div *ngIf="suscribir_anual; else elseBlock">
+          <ion-row>
+            <ion-col>
+              <ion-item color="light">Ingresá los datos de tu tarjeta:</ion-item>
+              <ion-item color="light">
+                <ion-icon name="card-outline"></ion-icon>
+                <ion-input id="idTarjetaNumero" type="text" maxlength="16" minlength="16"  #tarjetanumero required
+                  placeholder="Número de tarjeta (solo números)"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-item color="light">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <ion-input id="idTarjetaVence" type="date" #tarjetavence required></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-item color="light">
+                <ion-icon name="warning-outline"></ion-icon>
+                <ion-input id="idSeguridad" maxlength="3" minlength="3"  #seguridad required
+                  placeholder="Código de seguridad (3 números)" type="text"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="clsBoton">
+              <ion-button fill="solid" shape="round"
+                (click)="CreateUser(email, password, password2, nombre, apellido, tarjetanumero, tarjetavence, seguridad)">Registrarse</ion-button>
+              <ion-button fill="solid" shape="round" color="dark" routerLink="/login">Cancelar</ion-button>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <ng-template #elseBlock>
+          <ion-row>
+            <ion-col class="clsBoton">
+              <ion-button fill="solid" shape="round" color="primary" (click)="CreateUser(email, password, password2, nombre, apellido, '', '', '')">Registrarse</ion-button>
+              <ion-button fill="solid" shape="round" color="dark" routerLink="/login">Cancelar</ion-button>
+            </ion-col>
+          </ion-row>
+        </ng-template>
+
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

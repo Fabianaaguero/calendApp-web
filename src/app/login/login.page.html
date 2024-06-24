@@ -1,0 +1,41 @@
+<div class="fondo">
+  
+  <div class="contenedor">
+
+    <div class="imCred">
+
+      <div class="imagen">
+        <img class="imgLogin" src="../../../assets/robot250.png" alt="login_user">
+      </div>
+
+      <div class="credenciales">
+
+        <p>Ingrese sus credenciales:</p>
+
+        <div>
+          <input id="idEmail" type="email" #email required placeholder=" Ingresar email"/>
+        </div>
+
+        <div>
+          <input id="idPassw" type="password" #password required placeholder=" Ingresar contraseña" (keydown)="onKeyDown($event, email, password)"/>
+        </div>
+
+        <div>
+          <ion-button id="btnLogin" fill="solid" shape="round"  color="primary"  (click)="LogInWithEmail(email, password)">Iniciar sesión</ion-button>
+        </div>
+
+        <div>
+          <label class="clsOlvido">¿Olvidó su contraseña? Presione </label><button class="clsAqui" (click)="recuperarContrasena()">aquí</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="clsSinUsuario">
+      <ion-label>¿Aún no tiene usuario? </ion-label>
+      <ion-button id="btnRegister" fill="clear" (click)="Registrarse()">Regístrese</ion-button>  
+    </div>
+    
+  </div>
+
+</div>

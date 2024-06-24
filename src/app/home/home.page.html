@@ -1,0 +1,82 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-menu-toggle auto-hidden="false">
+        <ion-button expand="block"  routerLink="/perfil">Perfil</ion-button>
+        <ion-button expand="block" (click)="verAgendaTurnos()">Agenda</ion-button>
+        <ion-button expand="block" routerLink="/patients">Clientes</ion-button>
+        <ion-button expand="block" (click)="cerrarSesion()">Salir</ion-button>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="false" class="ion-padding">
+
+    <div class="contenedor">
+
+      <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+      <div>
+        <h1>Turnos para hoy</h1>
+      </div>
+
+      <div class="content-wrapper">
+        <div>
+          <ion-list class="lista1" [inset]="true">
+            <ion-item button *ngFor="let turno of turnosHoy">
+              <ion-label>{{ turno.nombre }} - {{turno.hora}} hs </ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+      </div>
+
+      <div *ngIf="noHayTurnos">
+        <img src="../../assets/robotduerme.png" alt="No hay turno" title="No hay turnos">
+        <h4>No hay turnos agendados para hoy</h4>
+      </div>
+
+      <div class="botonera">
+        <table>
+          <tr>
+            <td>
+              <button class="round-btn" routerLink="/patients">
+                <img class="imgBoton" src="../../assets/botones/botonClientes.png" alt="Clientes" title="Clientes">
+              </button>
+            </td>
+            <td>
+              <button class="round-btn" (click)=verAgendaTurnos()>
+                <img class="imgBoton" src="../../assets/botones/botonAgenda.png" alt="Agenda" title="Agenda de turnos">
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Clientes</label>
+            </td>
+            <td>
+              <label>Agenda</label>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+  </ion-content>
+</div>

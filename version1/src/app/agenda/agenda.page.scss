@@ -1,0 +1,71 @@
+
+ion-item {
+    text-align: center;
+}
+
+.content-wrapper {
+    margin-top: 2px;
+    position: relative;
+    overflow-y: auto;
+    max-height: 60dvh;
+}
+
+.lista1{
+    margin: 0px;
+    padding: 0px 15px;
+}
+
+.re-btn-wrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px 6px;
+    z-index: 1;
+}
+
+.round-btn {
+    --border-radius: 30px;
+    height: 15dvw;
+    width: 15dvw;
+    ion-icon {
+        height: 100%;
+        width: 100%;
+    }
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.turn-btn {
+    --background: #a23ae7;
+}
+
+.delete-btn {
+    --background: #ff0000;
+}
+
+.add-btn {
+    --background: #0000ff;
+}
+
+.back-btn {
+    --background: grey;
+}
+
+#pSinTurnos{
+    margin: 30px auto;
+}
+
+.clsTurnos ion-item.selected {
+    --ion-background-color: grey;
+    color:white;
+    font-size: 25px;
+    text-align: center;
+}
+
+@media screen and (max-height: 700px) {
+    .content-wrapper{
+        max-height: calc(60dvh - 90px);
+    }
+}

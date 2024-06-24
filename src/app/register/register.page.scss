@@ -1,0 +1,180 @@
+.fondo {
+    background-image: url("../../assets/header.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: aliceblue;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenedor {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 90%;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-items: center;
+}
+
+.imagen {
+    width: 40%;
+}
+
+.imgLogin{
+    margin: 15px auto;
+    max-width: 500px;
+    min-width: 100px;
+    width: 300px;
+}
+
+.formu {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-around;*/
+    width: 40%;
+    margin-top: 2em;
+}
+
+p {
+    color: black;
+}
+
+.dato {
+    background-color: aliceblue;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 15px;
+    height: 35px;
+    margin: 5px auto;
+    width: 250px;
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.susc {
+    background-color: aliceblue;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 15px;
+    height: 35px;
+    margin: 5px auto;
+    width: 250px;
+    max-width: 250px;
+    display: flex;
+    align-items: center; 
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+}
+
+.suscri {
+    width: 100%;
+}
+
+input {
+    background-color: aliceblue;
+}
+
+.borde {
+    border: none !important;
+    outline: none;
+  }
+
+ion-item {
+    color: aliceblue;
+}
+
+ion-col{
+    padding: 2px 5px;
+}
+
+ion-icon{
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+ion-radio{
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+ion-button{
+    width: 140px;
+}
+
+ion-input{
+    font-size: medium;
+}
+
+.clsBoton{
+    text-align: center;
+    margin: 3px auto 0 auto;
+}
+
+.bot {
+    width: 120px;
+    height: 30px;
+    font-size: 12px;
+}
+
+.lista1{
+    text-align: left; 
+}
+
+@media screen and (max-width: 500) and (orientation: portrait) {
+    ion-grid{
+        margin: 2px auto;
+        width: 95%;
+        text-align: center;
+        align-items: center;
+    }
+  }
+
+  .slide-up {
+    animation: slideUp 0.5s forwards;
+  }
+  
+  .slide-down {
+    animation: slideDown 0.5s forwards;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

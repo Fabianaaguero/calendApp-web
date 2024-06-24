@@ -1,0 +1,32 @@
+ion-text{
+    color: blue;
+    font-size:2rem;
+}
+
+ion-grid{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    min-width: 360px;
+}
+
+button{
+    position: absolute;
+    bottom: 20px;
+    left:5px;
+    right: 5px;
+    color:blue;
+    background-color: transparent;
+}
+
+.clsCol{
+    padding-bottom: 5%;
+    font-size: xx-large;
+}
+
+.clsImgFooter{
+    max-height: 70px;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}

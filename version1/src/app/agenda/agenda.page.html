@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons class="md"  mode="md" slot="start" >
+     <ion-back-button class="md" mode="md" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end">CalendApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="ion-padding">
+
+  <div class="contenedor">
+
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <div>
+        <h1>Turnos agendados para el día {{ fecha }}</h1>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="clsTurnos">
+        <ion-list class="lista1" [inset]="true">
+          <ion-item button *ngFor="let turno of turnosDia" (click)="seleccionarTurno(turno)"
+            [class.selected]="turno === turnoSeleccionado">
+            <ion-label>{{ turno.nombre }} - {{turno.hora}} hs </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+    <p id="pSinTurnos">{{ mensajeTurno }}</p>
+
+    <div class="re-btn-wrap">
+      <ion-button class="round-btn turn-btn" routerLink="/calendario" title="Ver turnos">
+        <ion-icon name="calendar" alt="Ver turnos"></ion-icon>
+      </ion-button>
+      <ion-button class="round-btn add-btn" (click)=agregarTurno() title="Agregar Turno">
+        <ion-icon name="add" alt="Agregar turno"></ion-icon>
+      </ion-button>
+      <ion-button class="round-btn delete-btn" title="Eliminar Turno" (click)="eliminarTurno()">
+        <ion-icon name="trash-outline" alt="Eliminar turno"></ion-icon>
+      </ion-button>
+      <!-- <ion-button class="round-btn back-btn" title="Volver" routerLink="/home">
+        <ion-icon name="arrow-undo-outline" alt="Volver al Home"></ion-icon>
+      </ion-button> -->
+    </div>
+  </div>
+</ion-content>

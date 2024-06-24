@@ -1,0 +1,36 @@
+ion-content {
+  display: grid;
+  box-sizing: border-box;
+  min-width: 345px;
+  text-align: center;
+  align-items: center;
+  margin: 0px auto;
+}
+
+ion-datetime {
+  margin: 10px auto;
+  padding: 3px;
+  background-color: lightgrey;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 15px;
+}
+
+ion-list {
+  margin: 0px auto;
+  text-align: center;
+}
+
+.selCliente {
+  display: grid;
+  margin: 0px auto;
+  text-align: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.clsBotones {
+  text-align: center;
+  margin: 0px auto;
+  margin-top: 50px;
+}/*# sourceMappingURL=createturno.page.css.map */

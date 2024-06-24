@@ -1,0 +1,54 @@
+.encabezado{
+    margin: 20px auto;
+}
+
+img{
+    max-width: 200px;    
+}
+
+.texto1{    
+    text-align: center;
+    font-weight:bold;  
+    font-size:medium;   
+    margin: 0px 10px; 
+}
+
+ion-icon{
+    margin-right: 5px;
+}
+
+ion-datetime{
+    width:400px;
+    height: 150px;
+    font-size: xx-small;
+}
+
+ion-item{
+    margin: 3px 10px;
+}
+
+.botones{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn{
+    width: 140px;
+    margin: 0px 5px;
+}
+
+.texto2{
+    background-color: grey;
+    margin:0px 10px;
+    padding: 5px 0px;
+}
+
+@media screen and (max-height: 740px)  and (orientation: portrait) {
+    img{
+        max-width: 100px;
+    }
+    ion-item{
+        height: 45px;
+        margin: 1px 10px;
+    }
+}

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons class="md"  mode="md" slot="start" >
+     <ion-back-button class="md" mode="md" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end">CalendApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" color="light" class="ion-text-center">
+  <div class="contenedor">
+    <ion-grid lines="none" class="ion-text-center">
+      <ion-row>
+        <ion-col>
+          <ion-text class="ion-text-wrap">Se produjo un error</ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="clsCol">
+          <ion-text class="ion-text-wrap">Por favor, vuelva a la página inicial y pruebe nuevamente</ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <img src="../../../assets/ERROR2.png" alt="Error">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <button fill="clear" type="button" color="primary" (click)="volverInicio()">Volver al inicio</button>
+  </div>
+</ion-content>

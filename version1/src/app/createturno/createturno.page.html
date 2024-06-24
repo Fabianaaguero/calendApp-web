@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons class="md"  mode="md" slot="start" >
+     <ion-back-button class="md" mode="md" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end">CalendApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="ion-padding">
+  <div>
+    <p class="ion-text-wrap"><b>Nuevo turno para el día: {{ fechaSel }}</b></p>
+  </div>
+
+  <div>
+    <p><b>Selecciona la hora para el turno:</b></p>
+    <ion-datetime id="calendario" #hora locale="es-Es" presentation="time"
+      (ionChange)="cambioFecha($event)"></ion-datetime>
+  </div>
+
+  <div class="selCliente">
+    <ion-label><b>Selecciona a quién le asignarás el turno:</b></ion-label>
+    <ion-list>
+      <ion-select lines="full" color="dark" aria-label="persona-turno" placeholder="Seleccionar"
+        (ionChange)="SeleccionPersona_Change($event)">
+        <ion-select-option *ngFor="let persona of personas" value={{persona.id}}>{{ persona.nombre }}
+          {{persona.apellido}}</ion-select-option>
+      </ion-select>
+    </ion-list>
+  </div>
+
+  <div class="clsBotones">
+    <ion-button fill="solid" shape="round" color="primary"  (click)="guardarTurno()" title="Guardar turno">Guardar</ion-button>
+    <ion-button fill="solid" shape="round" color="dark" routerLink="/home" title="Cancelar">Cancelar</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,119 @@
+@charset "UTF-8";
+.titulo {
+  margin: 10px 0px;
+}
+
+.lista1 {
+  margin: 0px;
+  padding: 0px 15px;
+  text-align: left;
+}
+
+ion-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+}
+ion-item ion-icon {
+  padding-right: 5px;
+  font-size: 18px;
+}
+
+ion-label {
+  margin: 7px 0px;
+  text-align: left;
+  padding: 10px;
+}
+
+.content-wrapper {
+  margin-top: 2px;
+  position: relative;
+  overflow-y: auto;
+  max-height: 50dvh;
+}
+
+.round-btn {
+  background-color: transparent;
+  --border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  max-width: 90px;
+  max-height: 90px;
+}
+
+.botonera {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+table {
+  width: 95%;
+  max-width: 700px;
+  margin-bottom: 20px;
+  font-size: small;
+}
+
+td {
+  padding: 0px 1px;
+  width: 20%;
+}
+
+.pacientes-wrapper ion-item.selected {
+  --ion-background-color:rgb(0, 174, 255);
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+.search-create {
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+}
+.search-create .create-btn {
+  --background: transparent;
+  /* Hacer el fondo transparente */
+  --border: none;
+  /* Eliminar el borde */
+  --height: auto;
+  /* Ajustar la altura automáticamente */
+  --width: auto;
+  /* Ajustar el ancho automáticamente */
+  --padding: 0px;
+  /* Eliminar el relleno interno */
+}
+.search-create .create-btn ion-icon {
+  height: 30px;
+  /* Reducir el tamaño del ícono */
+  width: 30px;
+  /* Reducir el tamaño del ícono */
+}
+
+.search-create,
+.content-wrapper {
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+@media screen and (max-height: 700px) {
+  .content-wrapper {
+    max-height: calc(50dvh - 90px);
+  }
+}
+@media screen and (max-width: 500px) {
+  table {
+    font-size: smaller;
+  }
+  table .round-btn {
+    width: 55px;
+  }
+}/*# sourceMappingURL=patients.page.css.map */

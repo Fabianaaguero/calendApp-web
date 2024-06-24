@@ -1,0 +1,141 @@
+<div class="fondo">
+  <div class="contenedor">
+    <div class="imagen">
+      <img class="imgLogin" src="../../../assets/robot250.png" alt="nuevo_usuario" />
+    </div>
+
+    <div class="formu">
+      <div class="datos" id="datosUsuario">
+        <p>Ingrese sus datos</p>
+        <div class="dato">
+          <ion-icon name="person-outline"></ion-icon>
+          <input
+            type="text"
+            [(ngModel)]="nombre"
+            required
+            placeholder="Nombre"
+            class="borde"
+          />
+        </div>
+
+        <div class="dato">
+          <ion-icon name="person-outline"></ion-icon>
+          <input
+            type="text"
+            [(ngModel)]="apellido"
+            required
+            placeholder="Apellido"
+            class="borde"
+          />
+        </div>
+
+        <div class="dato">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input
+            type="email"
+            [(ngModel)]="email"
+            required
+            placeholder="Email"
+            class="borde"
+          />
+        </div>
+
+        <div class="dato">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input
+            type="password"
+            [(ngModel)]="password"
+            required
+            placeholder="Contraseña (de 8 a 16 caracteres)"
+            class="borde"
+          />
+        </div>
+
+        <div class="dato">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input
+            type="password"
+            [(ngModel)]="password2"
+            required
+            placeholder="Repetir contraseña"
+            class="borde"
+          />
+        </div>
+
+        <div class="botones">
+          <ion-row>
+            <ion-col class="clsBoton">
+              <ion-button class="bot" fill="solid" shape="round" color="dark" id="btnSiguiente" (click)="showSubscription()">Siguiente</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="clsBoton">
+              <ion-button class="bot" fill="solid" shape="round" color="primary" routerLink="/login">Cancelar</ion-button>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+
+      <div id="datosSuscripcion" class="suscri" style="display: none;">
+        <p>Seleccione el tipo de suscripción:</p>
+
+        <div class="form-group">
+          <div class="susc">
+            <label>
+              <input type="radio" name="radio_list" value="prueba" checked (change)="radioGroupChange($event)">
+              Prueba de 30 días gratis
+            </label>
+          </div>
+          <div class="susc">
+            <label>
+              <input type="radio" name="radio_list" value="suscribir" (change)="radioGroupChange($event)">
+              Anual - 12 pagos de u$s5,00
+            </label>
+          </div>
+        </div>
+
+        <p>Ingrese los datos de su tarjeta:</p>
+        <div class="susc">
+          <ion-icon name="card-outline"></ion-icon>
+          <input class="borde"
+                 type="text"
+                 [(ngModel)]="tarjetaNumero"
+                 required
+                 placeholder="Número de tarjeta (solo números)"
+                 [disabled]="isPrueba">
+        </div>
+
+        <div class="susc">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <input class="borde"
+                 type="date"
+                 [(ngModel)]="tarjetaVence"
+                 required
+                 placeholder="Fecha de vencimiento (formato:mes/año)"
+                 [disabled]="isPrueba">
+        </div>
+
+        <div class="susc">
+          <ion-icon name="warning-outline"></ion-icon>
+          <input class="borde"
+                 type="text"
+                 [(ngModel)]="codigoSeguridad"
+                 required
+                 placeholder="Código de seguridad"
+                 [disabled]="isPrueba">
+        </div>
+
+        <ion-row>
+          <ion-col class="clsBoton">
+            <ion-button fill="solid" shape="round" (click)="CreateUser()">
+              Registrarse
+            </ion-button>
+            <ion-button fill="solid" shape="round" color="dark" (click)="showUserData()">
+              Volver
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+</div>

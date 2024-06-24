@@ -1,0 +1,95 @@
+ion-content {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 0px;
+  padding: 0px;
+  width: 100%;
+  --background: white;
+  --color:black;
+}
+
+.contenedor {
+  margin-top: 10svh;
+}
+
+.imgTop {
+  margin: 0px;
+  width: 100%;
+  max-height: 0px;
+}
+
+.imgLogin {
+  margin: 15px auto;
+  max-width: 250px;
+  min-width: 100px;
+}
+
+#btnLogin {
+  margin: 10px auto;
+}
+
+#btnRegister {
+  margin: 0px auto;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+input {
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-width: 1px;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 14px;
+  height: 35px;
+  margin: 5px auto;
+  width: 300px;
+  max-width: 350px;
+}
+
+.clsOlvido {
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+
+.clsAqui {
+  font-size: 18px;
+  font-weight: bolder;
+  color: black;
+  background-color: transparent;
+}
+
+.clsSinUsuario {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.logo {
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+  left: 5%;
+  vertical-align: middle;
+}
+.logo label {
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: bottom;
+}
+.logo img {
+  vertical-align: bottom;
+}
+
+@media screen and (min-height: 790px) {
+  .contenedor {
+    margin-top: 25svh;
+  }
+}/*# sourceMappingURL=login.page.css.map */

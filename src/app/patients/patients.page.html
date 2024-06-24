@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons class="md" mode="md" slot="start">
+      <ion-back-button class="md" mode="md" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end">CalendApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="ion-padding">
+
+  <div class="contenedor">
+
+    <h1 class="titulo">Clientes</h1>
+
+    <h6 class="titulo">Busca, crea, elimina clientes y agenda nuevos turnos.</h6>
+
+    <div class="search-create">
+      <ion-searchbar name="barSearch" [(ngModel)]="searchTerm" showCancelButton="focus" placeholder="Buscar"></ion-searchbar>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="pacientes-wrapper">
+        <ion-list class="lista1" [inset]="true">
+          <ion-item button *ngFor="let paciente of pacientes | filter:searchTerm"
+            (click)="seleccionarPaciente(paciente)" [class.selected]="paciente === pacienteSeleccionado">
+            <ion-label> {{ paciente.nombre }} {{ paciente.apellido }} </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+    <div class="botonera">
+      <table>
+        <tr>
+          <td>
+            <button class="round-btn" (click)=asignarTurnoPaciente() title="Agendar turno">
+              <img class="imgBoton" src="../../assets/botones/botonAgenda.png" alt="Agendar turno">
+            </button>
+          </td>
+          <td>
+            <button class="round-btn" (click)="accederAnotador()" title="Permite agregar notas sobre el cliente">
+              <img class="imgBoton" src="../../assets/botones/botonNotas.png" alt="Anotador">
+            </button>
+          </td>
+          <td>
+            <button class="round-btn" (click)="mostrarInformacionPaciente()" title="Muestra datos del cliente">
+              <img class="imgBoton" src="../../assets/botones/botonCliente.png" alt="Informacion del cliente">
+            </button>
+          </td>
+          <td>
+            <button class="round-btn" routerLink="/createpatient" title="Agrega cliente">
+              <img class="imgBoton" src="../../assets/botones/botonAgregar3.png" alt="Agrega clientes">
+            </button>
+          </td>
+          <td>
+            <button class="round-btn" (click)="eliminar()" title="Elimina cliente">
+              <img class="imgBoton" src="../../assets/botones/botonEliminar.png" alt="Elimina clientes">
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Agendar</label>
+          </td>
+          <td>
+            <label>Anotador</label>
+          </td>
+          <td>
+            <label>Información</label>
+          </td>
+          <td>
+            <label>Agregar</label>
+          </td>
+          <td>
+            <label>Eliminar</label>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</ion-content>
