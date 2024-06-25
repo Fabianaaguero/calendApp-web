@@ -1,3 +1,7 @@
+.contenedor {
+    height: 70%;
+}
+
 .titulo{
     margin: 10px 0px;
 }
@@ -27,7 +31,8 @@ ion-label{
     margin-top: 2px;
     position: relative;
     overflow-y: auto;
-    max-height: 50dvh;
+    max-height: 90dvh;
+    height: auto;
 }
 
 .round-btn {
@@ -35,8 +40,8 @@ ion-label{
     --border-radius: 50px;
     //width: 16dvw;
     //padding: 0px 2px;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     // ion-icon {
     //     height: 90%;
     //     width: 90%;
