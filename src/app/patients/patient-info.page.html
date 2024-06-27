@@ -22,9 +22,8 @@
       <p>DNI: {{ paciente.dni }}</p>
       <p>Teléfono: {{ paciente.telefono }}</p>
       <div class="botones">
-        <a href="https://wa.me/{{ paciente.telefono}}" class="boton" target="_blank" rel="noopener">Contactar por Whatsapp</a>
-        <a href="tel:{{ paciente.telefono }}" class="boton" target="_blank" rel="noopener">Llamar por teléfono</a>
-        <a href="mailto:{{ paciente.correo }}" class="boton" target="_blank" rel="noopener">Enviar email</a>
+        <div><a href="https://wa.me/{{ paciente.telefono}}" class="boton" target="_blank" rel="noopener">Contactar por Whatsapp</a></div>
+        <div><a href="mailto:{{ paciente.correo }}" class="boton" target="_blank" rel="noopener">Enviar email</a></div>
       </div>
     </div>
   </div>
