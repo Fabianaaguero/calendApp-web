@@ -34,9 +34,9 @@ export class AuthenticationService {
     try {
       let userAuth = await signInWithEmailAndPassword(this.auth, email, password)
       if (userAuth !== null && userAuth.user !== null && userAuth.user.email !== null) {
-        return true; //usuario válido
+        return true; 
       } else {
-        return false; //usuario no válido
+        return false; 
       }
     } catch (error: any) {
       return false;

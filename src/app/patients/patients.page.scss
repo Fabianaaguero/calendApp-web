@@ -89,21 +89,14 @@ td{
 
     .create-btn {
         --background: transparent;
-        /* Hacer el fondo transparente */
         --border: none;
-        /* Eliminar el borde */
         --height: auto;
-        /* Ajustar la altura automáticamente */
         --width: auto;
-        /* Ajustar el ancho automáticamente */
         --padding: 0px;
 
-        /* Eliminar el relleno interno */
         ion-icon {
             height: 30px;
-            /* Reducir el tamaño del ícono */
             width: 30px;
-            /* Reducir el tamaño del ícono */
         }
     }
 }

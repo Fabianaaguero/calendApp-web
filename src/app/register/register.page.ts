@@ -142,14 +142,6 @@ export class registerPage implements OnInit {
         return false;
       }
 
-      /*if (tarjeta_vence.length !== 6) {
-        this.utilsService.mostrarAlerta(
-          'Advertencia',
-          'La fecha ingresada es incorrecta'
-        );
-        return false;
-      }*/
-
       if (!this.isValidExpirationDate(tarjeta_vence)) {
         this.utilsService.mostrarAlerta('Advertencia', 'La fecha de vencimiento de la tarjeta ingresada es incorrecta');
         return false;

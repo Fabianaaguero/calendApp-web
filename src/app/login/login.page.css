@@ -8,7 +8,6 @@ body {
 .contenedor {
   display: flex;
   flex-direction: row;
-  /*margin-top: 10svh;*/
   width: 100%;
   height: 70%;
 }
